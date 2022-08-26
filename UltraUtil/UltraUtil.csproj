@@ -31,11 +31,54 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="0Harmony, Version=2.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\ULTRAKILL\BepInEx\core\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="0Harmony20">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\ULTRAKILL\BepInEx\core\0Harmony20.dll</HintPath>
+    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\ULTRAKILL\BepInEx\core\BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Harmony">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\ULTRAKILL\BepInEx\core\BepInEx.Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Preloader">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\ULTRAKILL\BepInEx\core\BepInEx.Preloader.dll</HintPath>
+    </Reference>
+    <Reference Include="HarmonyXInterop">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\ULTRAKILL\BepInEx\core\HarmonyXInterop.dll</HintPath>
+    </Reference>
     <Reference Include="MelonLoader">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\ULTRAKILL\MelonLoader\MelonLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil, Version=0.10.4.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\ULTRAKILL\BepInEx\core\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Mdb, Version=0.10.4.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\ULTRAKILL\BepInEx\core\Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb, Version=0.10.4.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\ULTRAKILL\BepInEx\core\Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Rocks, Version=0.10.4.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\ULTRAKILL\BepInEx\core\Mono.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.RuntimeDetour, Version=22.1.29.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\ULTRAKILL\BepInEx\core\MonoMod.RuntimeDetour.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.Utils, Version=22.1.29.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\ULTRAKILL\BepInEx\core\MonoMod.Utils.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -247,7 +290,11 @@
   <ItemGroup>
     <Compile Include="Cheats\DebugRoom.cs" />
     <Compile Include="Cheats\Godmode.cs" />
-    <Compile Include="Cheats\Hitlog.cs" />
+    <Compile Include="Cheats\BlackHoleCannon.cs" />
+    <Compile Include="Cheats\Greenscreen.cs" />
+    <Compile Include="Cheats\HideWeapon.cs" />
+    <Compile Include="Cheats\Screenshot.cs" />
+    <Compile Include="CreateCheats.cs" />
     <Compile Include="UltraUtilMod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -8,17 +8,18 @@ using UnityEngine;
 
 namespace UltraUtil.Cheats
 {
-    public class Godmode : ICheat
+    public class BHCannon : ICheat
     {
         private bool active;
-        public string LongName => nameof(Godmode);
-        public string Identifier => "ultrautil.godmode";
+        public BlackHoleCannon blackHoleCannon;
+        public string LongName => "BHCannon";
+        public string Identifier => "ultrautil.bhcannon";
         public string ButtonEnabledOverride { get; }
         public string ButtonDisabledOverride { get; }
         public string Icon => "flight";
         public bool IsActive => this.active;
         public bool DefaultState { get; }
-        public StatePersistenceMode PersistenceMode => StatePersistenceMode.Persistent;
+        public StatePersistenceMode PersistenceMode => StatePersistenceMode.NotPersistent;
 
         public void Enable()
         {
@@ -28,12 +29,12 @@ namespace UltraUtil.Cheats
         public void Disable()
         {
             this.active = false;
+
         }
 
         public void Update()
         {
-            MonoSingleton<NewMovement>.Instance.hp = 100;
-            MonoSingleton<NewMovement>.Instance.antiHp = 100;
+
         }
     }
 }

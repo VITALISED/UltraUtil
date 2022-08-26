@@ -6,35 +6,39 @@ using System.Text;
 using System.Threading.Tasks;
 using UltraUtil.Cheats;
 using ULTRAKILL.Cheats;
+using BepInEx;
+using UnityEngine.SceneManagement;
 
 namespace UltraUtil
 {
-    public class UltraUtilMod : MelonMod
+    public class UltraUtilMelonMod : MelonMod
     {
-        static bool loaded = false;
-
         public override void OnSceneWasInitialized(int buildIndex, string sceneName)
         {
             try
             {
-                RegisterCustomCheats();
+                CreateCheats.RegisterCustomCheats();
             }
             catch (Exception e)
             {
                 return;
             }
         }
+    }
 
-        void RegisterCustomCheats()
+    [BepInPlugin("com.vitalised.ultrautil", "UltraUtil", "0.0.0.1")]
+    public class UltraUtilBepInEx : BaseUnityPlugin
+    {
+        private void Awake()
         {
-            MonoSingleton<CheatsManager>.Instance.RegisterCheats(new ICheat[3]
+            try
             {
-                (ICheat)new DebugRoom(),
-                (ICheat)new Godmode(),
-                (ICheat)new Hitlog()
-            }, "ultrautil");
-
-            MonoSingleton<CheatsManager>.Instance.RebuildMenu();
+                CreateCheats.RegisterCustomCheats();
+            }
+            catch (Exception e)
+            {
+                return;
+            }
         }
     }
 }

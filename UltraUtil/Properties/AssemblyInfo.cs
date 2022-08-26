@@ -37,5 +37,5 @@ using MelonLoader;
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
 // ...
-[assembly: MelonInfo(typeof(UltraUtil.UltraUtilMod), "UltraUtil", "0.0.1", "VITALISED")]
+[assembly: MelonInfo(typeof(UltraUtil.UltraUtilMelonMod), "UltraUtil", "0.0.1", "VITALISED")]
 [assembly: MelonGame("Hakita", "ULTRAKILL")]

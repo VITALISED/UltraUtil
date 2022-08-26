@@ -12,10 +12,17 @@ namespace UltraUtil.Cheats
     public class DebugRoom : ICheat
     {
         private bool active;
-        public string LongName => nameof(DebugRoom);
+        public string LongName => "Debug Room";
         public string Identifier => "ultrautil.debugroom";
         public string ButtonEnabledOverride { get; }
-        public string ButtonDisabledOverride { get; }
+        public string ButtonDisabledOverride
+        {
+            get
+            {
+                return "LOAD";
+            }
+        }
+
         public string Icon => "flight";
         public bool IsActive => this.active;
         public bool DefaultState { get; }
